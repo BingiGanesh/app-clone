@@ -659,6 +659,7 @@ function TicketView() {
     const month = today.getMonth() + 1 < 10 ? `0${today.getMonth() + 1}` : today.getMonth() + 1
     const bookedTicketJson = localStorage.getItem('booked-ticket')
     const bookedTicket = JSON.parse(bookedTicketJson)
+    const userName = localStorage.getItem('username')
 
 
     const ticketNumber = `${date + month + today.getFullYear()}/${getDaysNumber()}/${getBookingNumber()}`
@@ -702,7 +703,7 @@ function TicketView() {
                             <div class="TicketCard_viewText__fJ42Z">
                                 <div class="TicketCard_TicketNumber__5kwYy">
                                     <label>Name:</label>
-                                    <p class="TicketCard_Num__lWVJi">Ganesh Bingi</p>
+                                    <p class="TicketCard_Num__lWVJi">${userName}</p>
                                 </div>
                                 <div class="TicketCard_TicketNumber__5kwYy">
                                     <label>TICKECT NUMBER:</label>
