@@ -634,8 +634,9 @@ function Ticket() {
                                     seconds after button is clicked. VIEW TICKET button to be clicked by Security
                                     personnel only!</p>
                             </div>
-                            <div class="TicketCard_viewTicketBtn__NQPOS">VIEW TICKET<p
-                                    class="text_xxs">at <b>${getFormatedViewTime(bookedTicket.trip_start_time)}</b></p>
+                            <div class="TicketCard_viewTicketBtn__NQPOS">VIEW TICKET
+                            <!--<p
+                                    class="text_xxs">at <b>${getFormatedViewTime(bookedTicket.trip_start_time)}</b></p>-->
                             </div>
                         </div>
                     </div>
@@ -661,8 +662,8 @@ function TicketView() {
     const bookedTicket = JSON.parse(bookedTicketJson)
     const userName = localStorage.getItem('username')
 
-
-    const ticketNumber = `${date + month + today.getFullYear()}/${getDaysNumber()}/${getBookingNumber()}`
+// ${getDaysNumber()}
+    const ticketNumber = `${date + month + today.getFullYear()}/221/${getBookingNumber()}`
 
     return `<div class="BookTicket_BookingPage__iD0EF">
         <div class="BookTicketHeader_BookTicketHeader__Y3Jfo">
